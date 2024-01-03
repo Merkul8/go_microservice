@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+// Данный микросервис выводит товары продавцов с наибольшим количеством просмотров
+
 type Product struct {
 	ID           int  `json:"id"`
 	Name         string `json:"name"`
