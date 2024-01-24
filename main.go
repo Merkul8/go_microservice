@@ -11,12 +11,6 @@ import (
 // curl -X POST -d "{\"username\":\"your_username\",\"password\":\"your_password\"}" -H "Content-Type: application/json" http://127.0.0.1:8000/api-token-auth/
 
 
-/* 
-Мне нужно сделать форму получения от продавца username and password, в ответ я буду выдавать отчет о их товарах,
- будет посылаться запрос на получение токена, который указан выше и далее запрос на API маркетплейса для получения 
- товаров. Затем будет происходить процесс генерации отчета, который в последствии будет отправлен обратно на маркетплейс 
-*/ 
-
 type Product struct {
 	ID         int  `json:"id"`
 	Name       string `json:"name"`
@@ -39,6 +33,7 @@ type TokenResponse struct {
 }
 
 func getToken(username, password string) (string, error) {
+	
 	credentials := &Credentials{
 		Username: username,
 		Password: password,
