@@ -23,8 +23,8 @@ type Product struct {
 	ProductCount int  `json:"product_count"`
 	Slug       string `json:"slug"`
 	IsStock    bool `json:"is_stock"`
-	SellerIDID int  `json:"seller_id_id"`
-	Views      int  `json:"views"`
+	SellerIDID int  `json:"seller_id"`
+	Views      int  `json:"total_views"`
 }
 
 type Credentials struct {
